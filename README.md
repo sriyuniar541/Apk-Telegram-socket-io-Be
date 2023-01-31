@@ -26,7 +26,7 @@
 * [Run Locally](https://github.com/helmipradita/be-telegram/edit/main/README.md#run-locally)
 * [Demo](https://github.com/helmipradita/be-telegram/edit/main/README.md#demo)
   *  [x] [API Reference - Auth](#api-reference---auth)
-  *  [x] [API Reference - Group](#api-reference---Group)
+  *  [x] [API Reference - Group](#api-reference---group)
 * [Related Project](#related-project)
 * [Contact](#contact)
 
@@ -97,6 +97,14 @@ Field body form
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": {
+    "otp": "289495"
+  },
+  "message": "register success please check your email to verif"
+}
 ```
 
 #### Login
@@ -115,6 +123,23 @@ Field body form
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": {
+    "id": "3618c635-6180-4637-9880-4b10abbd53dd",
+    "email": "sriyuniar863@gmail.com",
+    "fullname": "user 1",
+    "adress": null,
+    "phonenumber": null,
+    "photo": null,
+    "verif": 1,
+    "otp": 289495,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2MThjNjM1LTYxODAtNDYzNy05ODgwLTRiMTBhYmJkNTNkZCIsImVtYWlsIjoic3JpeXVuaWFyODYzQGdtYWlsLmNvbSIsImZ1bGxuYW1lIjoidXNlciAxIiwiaWF0IjoxNjc1MTU2OTg2LCJleHAiOjE2NzUxNjA1ODZ9.uzmJmPjlv3dWA8AXiI-vyINFO2_Qp5O34AVBLUxBfVA",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2MThjNjM1LTYxODAtNDYzNy05ODgwLTRiMTBhYmJkNTNkZCIsImVtYWlsIjoic3JpeXVuaWFyODYzQGdtYWlsLmNvbSIsImZ1bGxuYW1lIjoidXNlciAxIiwiaWF0IjoxNjc1MTU2OTg2LCJleHAiOjE2NzUyNDMzODZ9.qqDQPr8oUQc0qqBdcYXGOj6djUH7dgv-IkAM_qX_YYI"
+  },
+  "message": "login success"
+}
 ```
 
 #### Verification
@@ -133,7 +158,12 @@ Field body form
 Response 200
 
 ```json
-
+{
+  "success": true,
+  "statusCode": 200,
+  "data": {},
+  "message": "email succes"
+}
 ```
 
 #### Edit profile 
@@ -159,7 +189,17 @@ Field body form
 Response 200
 
 ```json
-
+{
+  "success": true,
+  "statusCode": 200,
+  "data": {
+    "id": "3618c635-6180-4637-9880-4b10abbd53dd",
+    "email": "sriyuniar86@gmail.com",
+    "fullname": "sri keren",
+    "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675157383/telegram/hwc1nk84muhoblqqe9il.png"
+  },
+  "message": "update data users success"
+}
 ```
 
 #### Get all users
@@ -171,7 +211,68 @@ Response 200
 Response 200
 
 ```json
-
+{
+  "success": true,
+  "statusCode": 200,
+  "data": [
+    {
+      "id": "ecd3d781-8f99-451c-ac10-f8cae24aa4c4",
+      "email": "sriyuniar86@gmail.com",
+      "password": "$2a$10$LOosMpW6vNf90MipHv1CjeRMk/jh/ms1nRNF0.xATrvKScPB2X0JC",
+      "fullname": "user 1",
+      "adress": null,
+      "phonenumber": null,
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675044867/telegram/ol11shpdqv5rgqxffgr2.png",
+      "verif": 1,
+      "otp": 325303
+    },
+    {
+      "id": "dbc80f67-bf37-488a-945d-793657b641f0",
+      "email": "sriyuniar866@gmail.com",
+      "password": "$2a$10$lwvZdPa7XT2dMVR8z8NlqO6ZK/th9KkzqE1WYnWrs7uPP9eDcCjDe",
+      "fullname": "user 2",
+      "adress": null,
+      "phonenumber": null,
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675044922/telegram/ildunfc6ipvg4djkokkf.png",
+      "verif": 1,
+      "otp": 925862
+    },
+    {
+      "id": "e6ad2e89-7380-44db-b824-1eb7f9b56cca",
+      "email": "sriyuniar862@gmail.com",
+      "password": "$2a$10$aw4NqIgT.OmMkPk.cz3VaeClx1llAzPDE.jb7f6wClVxc4jC1t3QO",
+      "fullname": "user 3",
+      "adress": null,
+      "phonenumber": null,
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675045031/telegram/wdivjanjswjupvtkokvl.png",
+      "verif": 1,
+      "otp": 20659
+    },
+    {
+      "id": "c560ff6c-d68d-43cb-ae94-957e2c0692f4",
+      "email": "sriyuniar541@gmail.com",
+      "password": "$2a$10$LKemhUAEjWvxa33nqwlUB.RWu3e2rK9e.CqFsdE/5AYyQJVzy1MlW",
+      "fullname": "sri baru",
+      "adress": null,
+      "phonenumber": null,
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675046287/telegram/gberadusxtjyeimsjzx7.png",
+      "verif": 1,
+      "otp": 281084
+    },
+    {
+      "id": "3618c635-6180-4637-9880-4b10abbd53dd",
+      "email": "sriyuniar86@gmail.com",
+      "password": "$2a$10$KgEEjibMiByFgSKKsJiPZO.xy1qyJNJd5slvVMPta8RXoMRz96gVu",
+      "fullname": "sri keren",
+      "adress": null,
+      "phonenumber": null,
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675157383/telegram/hwc1nk84muhoblqqe9il.png",
+      "verif": 1,
+      "otp": 289495
+    }
+  ],
+  "message": "get all users success"
+}
 ```
 
 #### Get users by id
@@ -189,6 +290,22 @@ Field auth
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": {
+    "id": "3618c635-6180-4637-9880-4b10abbd53dd",
+    "email": "sriyuniar86@gmail.com",
+    "password": "$2a$10$KgEEjibMiByFgSKKsJiPZO.xy1qyJNJd5slvVMPta8RXoMRz96gVu",
+    "fullname": "sri keren",
+    "adress": null,
+    "phonenumber": null,
+    "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675157383/telegram/hwc1nk84muhoblqqe9il.png",
+    "verif": 1,
+    "otp": 289495
+  },
+  "message": "get data users success"
+}
 ```
 
 #### Get users by user_id
@@ -205,12 +322,28 @@ Field auth
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": {
+    "id": "3618c635-6180-4637-9880-4b10abbd53dd",
+    "email": "sriyuniar86@gmail.com",
+    "password": "$2a$10$KgEEjibMiByFgSKKsJiPZO.xy1qyJNJd5slvVMPta8RXoMRz96gVu",
+    "fullname": "sri keren",
+    "adress": null,
+    "phonenumber": null,
+    "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675157383/telegram/hwc1nk84muhoblqqe9il.png",
+    "verif": 1,
+    "otp": 289495
+  },
+  "message": "get data users success"
+}
 
 ```
 
 </details>
 
-## API Reference - Group(chat)
+## API Reference - Group
 
 <details>
 <summary>Show</summary>
@@ -239,6 +372,12 @@ Field body form
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": [],
+  "message": "insert grups success"
+}
 
 ```
 
@@ -251,6 +390,31 @@ Response 200
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": [
+    {
+      "id": "3d6c008c-8ea6-409e-b8cc-f3e96b256394",
+      "name": "Javascript",
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675045095/telegram/vvshuw0zdshxhsjjes4s.jpg",
+      "id_user": "ecd3d781-8f99-451c-ac10-f8cae24aa4c4"
+    },
+    {
+      "id": "454df6e8-651b-4eef-a704-8cfb2a1f6447",
+      "name": "Golang",
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675045236/telegram/ospatmiz84nxpffghsj7.jpg",
+      "id_user": "ecd3d781-8f99-451c-ac10-f8cae24aa4c4"
+    },
+    {
+      "id": "b1c0394a-19b4-41e7-9dbb-4ddd8b1ae7e1",
+      "name": "CSS",
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675157791/telegram/fi6eqkfddjmdxkvlu4xx.png",
+      "id_user": "3618c635-6180-4637-9880-4b10abbd53dd"
+    }
+  ],
+  "message": "get grups success"
+}
 
 ```
 
@@ -268,6 +432,19 @@ Field auth
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": [
+    {
+      "id": "b1c0394a-19b4-41e7-9dbb-4ddd8b1ae7e1",
+      "name": "CSS",
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675157791/telegram/fi6eqkfddjmdxkvlu4xx.png",
+      "id_user": "3618c635-6180-4637-9880-4b10abbd53dd"
+    }
+  ],
+  "message": "get grups success"
+}
 
 ```
 #### Get group by id
@@ -291,6 +468,19 @@ Field body params
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": [
+    {
+      "id": "b1c0394a-19b4-41e7-9dbb-4ddd8b1ae7e1",
+      "name": "CSS",
+      "photo": "http://res.cloudinary.com/dxrsjyu6o/image/upload/v1675157791/telegram/fi6eqkfddjmdxkvlu4xx.png",
+      "id_user": "3618c635-6180-4637-9880-4b10abbd53dd"
+    }
+  ],
+  "message": "get grups success"
+}
 
 ```
 
@@ -324,6 +514,12 @@ Field body form
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": [],
+  "message": "update grups success"
+}
 
 ```
 
@@ -348,6 +544,12 @@ Field body params
 Response 200
 
 ```json
+{
+  "success": true,
+  "statusCode": 200,
+  "data": [],
+  "message": "delete grups success"
+}
 
 ```
 
