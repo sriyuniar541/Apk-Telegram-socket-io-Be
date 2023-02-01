@@ -556,7 +556,7 @@ Response 200
 
 
 ## Related Project
-* [`Backend Project Telegram `](https://github.com/sriyuniar541/Apk-Telegram-socket-io-Be)
+* [`Frontend Project Telegram `](https://github.com/sriyuniar541/Apk-Telegram-socket-io--Fe)
 
 ## Contact
   * Sri Yuniar [@sriyuniar541](https://github.com/sriyuniar541)
