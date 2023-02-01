@@ -11,7 +11,6 @@
     <a href="https://github.com/sriyuniar541/Apk-Telegram-socket-io-Be"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/sriyuniar541/Apk-Telegram-socket-io-Be">View Demo</a>
   </p>
 </p>
 
